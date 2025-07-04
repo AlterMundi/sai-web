@@ -1,0 +1,165 @@
+---
+// src/components/sections/AboutSection.astro
+// Sección sobre el problema y contexto actual
+---
+
+<section class="py-16 bg-white sm:py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
+        El problema que enfrentamos
+      </h2>
+      <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+        El sistema actual de detección de incendios en Córdoba presenta serias limitaciones 
+        que ponen en riesgo a nuestras comunidades y bosques nativos.
+      </p>
+    </div>
+    
+    <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+      
+      <!-- Content -->
+      <div>
+        
+        <!-- Problem Points -->
+        <div class="space-y-8">
+          
+          <!-- Point 1: Detección Tardía -->
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg">
+                <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-lg font-semibold text-gray-900">Detección tardía</h3>
+              <p class="mt-1 text-gray-600">
+                Los incendios se detectan cuando ya están avanzados. El tiempo promedio 
+                de detección es de 30 minutos o más, permitiendo que se propaguen descontroladamente.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Point 2: Dependencia humana -->
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg">
+                <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-lg font-semibold text-gray-900">Dependencia de avistaje humano</h3>
+              <p class="mt-1 text-gray-600">
+                La detección depende de que alguien vea el humo o las llamas. Durante la noche 
+                o en zonas remotas, esta dependencia se vuelve crítica.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Point 3: Cobertura limitada -->
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center w-12 h-12 bg-yellow-100 rounded-lg">
+                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 4m0 13V4m0 0L9 7"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-lg font-semibold text-gray-900">Cobertura insuficiente</h3>
+              <p class="mt-1 text-gray-600">
+                Las zonas rurales y serranías carecen de monitoreo constante. Los sistemas 
+                tradicionales no pueden cubrir todas las áreas de riesgo.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Point 4: Coordinación deficiente -->
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-lg font-semibold text-gray-900">Coordinación deficiente</h3>
+              <p class="mt-1 text-gray-600">
+                La comunicación entre observadores, bomberos y autoridades es lenta e ineficiente. 
+                Se pierden minutos valiosos en la cadena de alerta.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Solution Teaser -->
+        <div class="mt-12 p-6 bg-green-50 rounded-lg border border-green-200">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <div class="ml-4">
+              <h4 class="text-lg font-semibold text-green-900">Es hora de cambiar</h4>
+              <p class="mt-1 text-green-700">
+                El Sistema S.A.I. revoluciona la detección de incendios con tecnología de 
+                inteligencia artificial, alertas automáticas y cobertura 24/7.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Visual/Image -->
+      <div class="mt-12 lg:mt-0">
+        <div class="relative">
+          <!-- Background decoration -->
+          <div class="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+          
+          <!-- Main image -->
+          <div class="relative bg-white shadow-lg sm:rounded-3xl overflow-hidden">
+            <img class="w-full h-96 object-cover" 
+                 src="/images/incendio-problema.jpg" 
+                 alt="Incendio forestal avanzado - El problema actual"
+                 width="600"
+                 height="400">
+            
+            <!-- Overlay with problem indicators -->
+            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+              <div class="text-center text-white">
+                <div class="inline-flex items-center px-4 py-2 bg-red-600 rounded-full mb-4">
+                  <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-sm font-medium">Sistema actual</span>
+                </div>
+                <h4 class="text-xl font-bold mb-2">Detectado demasiado tarde</h4>
+                <p class="text-sm opacity-90">Cuando lo vemos, ya es difícil de controlar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Animaciones suaves para las tarjetas */
+  .flex.items-start:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+  }
+  
+  /* Mejora visual para la sección de solución */
+  .bg-green-50 {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(34 197 94 / 0.03)'%3e%3cpath d='m0 .5h32m-32 32v-32'/%3e%3c/svg%3e");
+  }
+</style>

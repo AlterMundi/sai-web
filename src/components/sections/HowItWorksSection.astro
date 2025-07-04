@@ -1,0 +1,325 @@
+---
+// src/components/sections/HowItWorksSection.astro
+// Sección que explica cómo funciona el sistema S.A.I.
+---
+
+<section id="como-funciona" class="py-16 bg-gray-50 sm:py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
+        Cómo funciona el Sistema S.A.I.
+      </h2>
+      <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+        Tecnología de vanguardia que combina inteligencia artificial, cámaras de alta resolución 
+        y comunicación automática para detectar incendios en tiempo real.
+      </p>
+    </div>
+    
+    <!-- How it Works Steps -->
+    <div class="relative">
+      
+      <!-- Connection Line -->
+      <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-orange-300 transform -translate-x-1/2 lg:block hidden"></div>
+      
+      <!-- Steps -->
+      <div class="space-y-12 lg:space-y-16">
+        
+        <!-- Step 1: Detección -->
+        <div class="relative">
+          <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+            
+            <!-- Step Number -->
+            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:block hidden">
+              <div class="flex items-center justify-center w-12 h-12 bg-orange-600 rounded-full text-white font-bold text-lg z-10">
+                1
+              </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="lg:pr-8">
+              <div class="flex items-center lg:hidden mb-4">
+                <div class="flex items-center justify-center w-10 h-10 bg-orange-600 rounded-full text-white font-bold mr-4">
+                  1
+                </div>
+                <div class="h-0.5 flex-1 bg-orange-300"></div>
+              </div>
+              
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                Detección Inteligente 24/7
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Las cámaras de alta resolución del nodo S.A.I. capturan imágenes cada 30 segundos. 
+                Nuestra inteligencia artificial entrenada específicamente para detectar humo y llamas 
+                analiza cada imagen en tiempo real.
+              </p>
+              
+              <!-- Features -->
+              <div class="space-y-3">
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-sm text-gray-700">Análisis de imágenes cada 30 segundos</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-sm text-gray-700">IA entrenada específicamente para incendios</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-sm text-gray-700">Funcionamiento diurno y nocturno</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Image -->
+            <div class="mt-8 lg:mt-0">
+              <div class="relative">
+                <img class="w-full h-64 object-cover rounded-lg shadow-lg" 
+                     src="/images/nodo-sai-camara.jpg" 
+                     alt="Nodo S.A.I. con cámara de detección"
+                     width="500"
+                     height="300">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                <div class="absolute bottom-4 left-4 right-4">
+                  <div class="bg-white/90 backdrop-blur-sm rounded-lg p-3">
+                    <div class="flex items-center">
+                      <div class="w-3 h-3 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+                      <span class="text-sm font-medium text-gray-900">Sistema activo - Monitoreando</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Step 2: Análisis -->
+        <div class="relative">
+          <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+            
+            <!-- Step Number -->
+            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:block hidden">
+              <div class="flex items-center justify-center w-12 h-12 bg-orange-600 rounded-full text-white font-bold text-lg z-10">
+                2
+              </div>
+            </div>
+            
+            <!-- Image (First on mobile, second on desktop) -->
+            <div class="lg:order-1 mb-8 lg:mb-0">
+              <div class="relative">
+                <img class="w-full h-64 object-cover rounded-lg shadow-lg" 
+                     src="/images/ai-analysis.jpg" 
+                     alt="Análisis de inteligencia artificial detectando humo"
+                     width="500"
+                     height="300">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                <div class="absolute top-4 left-4 right-4">
+                  <div class="bg-red-600/90 backdrop-blur-sm rounded-lg p-3">
+                    <div class="flex items-center">
+                      <svg class="w-5 h-5 text-white mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                      </svg>
+                      <span class="text-sm font-medium text-white">FUEGO DETECTADO</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="lg:order-2 lg:pl-8">
+              <div class="flex items-center lg:hidden mb-4">
+                <div class="flex items-center justify-center w-10 h-10 bg-orange-600 rounded-full text-white font-bold mr-4">
+                  2
+                </div>
+                <div class="h-0.5 flex-1 bg-orange-300"></div>
+              </div>
+              
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                Análisis Instantáneo con IA
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Cuando la inteligencia artificial detecta humo o llamas, analiza la imagen para 
+                confirmar la presencia de fuego y determinar el nivel de riesgo. El sistema 
+                puede distinguir entre fuego real y falsos positivos como neblina o polvo.
+              </p>
+              
+              <!-- Features -->
+              <div class="space-y-3">
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-sm text-gray-700">Detección en menos de 3 minutos</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-sm text-gray-700">Reducción de falsos positivos</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-sm text-gray-700">Evaluación del nivel de riesgo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Step 3: Alerta -->
+        <div class="relative">
+          <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+            
+            <!-- Step Number -->
+            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:block hidden">
+              <div class="flex items-center justify-center w-12 h-12 bg-orange-600 rounded-full text-white font-bold text-lg z-10">
+                3
+              </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="lg:pr-8">
+              <div class="flex items-center lg:hidden mb-4">
+                <div class="flex items-center justify-center w-10 h-10 bg-orange-600 rounded-full text-white font-bold mr-4">
+                  3
+                </div>
+                <div class="h-0.5 flex-1 bg-orange-300"></div>
+              </div>
+              
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                Alerta Automática Instantánea
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Una vez confirmado el incendio, el sistema envía alertas automáticas a través de 
+                Telegram a bomberos, autoridades locales y la comunidad. Incluye ubicación exacta, 
+                imagen del incendio y nivel de riesgo.
+              </p>
+              
+              <!-- Features -->
+              <div class="space-y-3">
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-sm text-gray-700">Alertas vía Telegram instantáneas</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-sm text-gray-700">Coordenadas GPS precisas</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-sm text-gray-700">Funciona sin conexión a internet</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Image -->
+            <div class="mt-8 lg:mt-0">
+              <div class="relative">
+                <img class="w-full h-64 object-cover rounded-lg shadow-lg" 
+                     src="/images/telegram-alert.jpg" 
+                     alt="Alerta de Telegram del sistema S.A.I."
+                     width="500"
+                     height="300">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                <div class="absolute bottom-4 left-4 right-4">
+                  <div class="bg-blue-600/90 backdrop-blur-sm rounded-lg p-3">
+                    <div class="flex items-center">
+                      <svg class="w-5 h-5 text-white mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                      </svg>
+                      <span class="text-sm font-medium text-white">Alerta enviada a bomberos</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Technical Specs -->
+    <div class="mt-16 bg-white rounded-2xl shadow-lg p-8">
+      <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+        Especificaciones Técnicas
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900">Cámara</h4>
+          <p class="text-sm text-gray-600">4K, visión nocturna, zoom 10x</p>
+        </div>
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mb-4">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900">Energía</h4>
+          <p class="text-sm text-gray-600">Solar + batería 72hs autonomía</p>
+        </div>
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-full mb-4">
+            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path>
+            </svg>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900">Conectividad</h4>
+          <p class="text-sm text-gray-600">4G/WiFi, funciona offline</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Animaciones para los pasos */
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  /* Mejoras visuales */
+  .lg\:order-1 {
+    order: 1;
+  }
+  
+  .lg\:order-2 {
+    order: 2;
+  }
+  
+  @media (max-width: 1024px) {
+    .lg\:order-1, .lg\:order-2 {
+      order: initial;
+    }
+  }
+</style>

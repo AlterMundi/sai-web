@@ -1,0 +1,266 @@
+---
+// src/components/sections/CTAFinalSection.astro
+// Sección final de llamado a la acción
+---
+
+<section class="relative py-20 bg-gradient-to-br from-orange-600 via-red-600 to-pink-600 overflow-hidden">
+  
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0 bg-flame-pattern"></div>
+  </div>
+  
+  <!-- Background Shapes -->
+  <div class="absolute inset-0">
+    <div class="absolute top-0 left-0 w-72 h-72 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/2 translate-y-1/2"></div>
+  </div>
+  
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      
+      <!-- Main CTA Content -->
+      <div class="mb-12">
+        <h2 class="text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
+          Sumate al sistema de alerta
+        </h2>
+        <p class="mt-6 text-xl text-white/90 sm:text-2xl max-w-3xl mx-auto">
+          Ayudanos a evitar tragedias. Cada nodo instalado es una comunidad más protegida.
+        </p>
+      </div>
+      
+      <!-- Stats Row -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        
+        <!-- Stat 1: Tiempo -->
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div class="text-3xl font-bold text-white mb-2">3min</div>
+          <div class="text-white/80">Detección instantánea</div>
+        </div>
+        
+        <!-- Stat 2: Cobertura -->
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+          </div>
+          <div class="text-3xl font-bold text-white mb-2">24/7</div>
+          <div class="text-white/80">Vigilancia constante</div>
+        </div>
+        
+        <!-- Stat 3: Impacto -->
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <div class="text-3xl font-bold text-white mb-2">100%</div>
+          <div class="text-white/80">Éxito en detección</div>
+        </div>
+      </div>
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
+        
+        <!-- Primary CTA -->
+        <a href="#formulario" 
+           class="group inline-flex items-center justify-center px-8 py-4 bg-white text-orange-600 rounded-lg font-bold text-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-orange-600 transition-all duration-200 transform hover:scale-105 shadow-2xl">
+          <svg class="w-6 h-6 mr-2 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+          </svg>
+          Solicitar Instalación
+        </a>
+        
+        <!-- Secondary CTA -->
+        <a href="tel:+5435112345678" 
+           class="group inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold text-lg hover:bg-white hover:text-orange-600 focus:outline-none focus:ring-2 focus:ring-white transition-all duration-200 transform hover:scale-105">
+          <svg class="w-6 h-6 mr-2 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          Llamar Ahora
+        </a>
+      </div>
+      
+      <!-- Urgency Message -->
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto mb-12">
+        <div class="flex items-center justify-center mb-4">
+          <svg class="w-8 h-8 text-yellow-300 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+          </svg>
+          <h3 class="text-xl font-bold text-white">¡No esperemos a la próxima tragedia!</h3>
+        </div>
+        <p class="text-white/90 text-lg leading-relaxed">
+          Cada día que pasa sin protección es un día de riesgo. El Sistema S.A.I. puede estar 
+          funcionando en tu comunidad en menos de una semana. <strong>Actúa ahora.</strong>
+        </p>
+      </div>
+      
+      <!-- Social Proof -->
+      <div class="text-center">
+        <p class="text-white/80 text-sm mb-6">
+          Más de 50 comunidades ya confiaron en nosotros
+        </p>
+        
+        <!-- Trust Indicators -->
+        <div class="flex flex-wrap items-center justify-center gap-8 opacity-80">
+          <div class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-white text-sm">Sin costo inicial</span>
+          </div>
+          
+          <div class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-white text-sm">Instalación gratuita</span>
+          </div>
+          
+          <div class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-white text-sm">Soporte 24/7</span>
+          </div>
+          
+          <div class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-white text-sm">Garantía 2 años</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+    <div class="animate-bounce">
+      <svg class="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Flame pattern background */
+  .bg-flame-pattern {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3e%3cpath d='M50 10c-5 0-10 5-10 10 0 10 5 15 10 15s10-5 10-15c0-5-5-10-10-10zm0 40c-8 0-15 7-15 15 0 15 7 25 15 25s15-10 15-25c0-8-7-15-15-15z' fill='%23ffffff' fill-opacity='0.03'/%3e%3c/svg%3e");
+    background-size: 60px 60px;
+    animation: float 20s ease-in-out infinite;
+  }
+  
+  /* Floating animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  /* Gradient animation */
+  .bg-gradient-to-br {
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 0%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 100%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Pulse animation for icons */
+  .group:hover .group-hover\:animate-pulse {
+    animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .group:hover .group-hover\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+  
+  /* Backdrop blur support */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+  
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Improved button hover effects */
+  .transform:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Focus states */
+  .focus\:ring-2:focus {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
+  
+  /* Responsive improvements */
+  @media (max-width: 640px) {
+    .text-4xl {
+      font-size: 2.5rem;
+    }
+    
+    .text-xl {
+      font-size: 1.125rem;
+    }
+  }
+</style>
+
+<script>
+  // Smooth scroll para los enlaces internos
+  document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('a[href^="#"]');
+    
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  });
+  
+  // Animación de entrada cuando la sección es visible
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    
+    const ctaSection = document.querySelector('.bg-gradient-to-br');
+    if (ctaSection) {
+      observer.observe(ctaSection);
+    }
+  });
+</script>

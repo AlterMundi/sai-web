@@ -1,0 +1,287 @@
+---
+// src/components/sections/VideoSection.astro
+// Sección de testimonios y videos del sistema S.A.I.
+---
+
+<section class="py-16 bg-gradient-to-b from-gray-50 to-white sm:py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
+        Testimonios y Pruebas Reales
+      </h2>
+      <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+        Conocé las experiencias de las primeras comunidades que implementaron el Sistema S.A.I. 
+        y mirá cómo funciona en situaciones reales.
+      </p>
+    </div>
+    
+    <!-- Main Video -->
+    <div class="mb-16">
+      <div class="relative max-w-4xl mx-auto">
+        <div class="relative bg-black rounded-2xl shadow-2xl overflow-hidden">
+          <!-- Video Placeholder -->
+          <div class="aspect-video bg-gray-900">
+            <img class="w-full h-full object-cover" 
+                 src="/images/video-testimonial-thumb.jpg" 
+                 alt="Video testimonial del Sistema S.A.I."
+                 width="800"
+                 height="450">
+            
+            <!-- Play Button -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <button class="group flex items-center justify-center w-24 h-24 bg-red-600 rounded-full hover:bg-red-700 transform hover:scale-110 transition-all duration-300 shadow-2xl">
+                <svg class="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </button>
+            </div>
+            
+            <!-- Video Info Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-xl font-bold text-white">Sistema S.A.I. en Acción</h3>
+                  <p class="text-gray-300 text-sm">Testimonios de Molinari, La Serranita y La Rancherita</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
+                  </svg>
+                  <span class="text-white text-sm">8:45 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Testimonials Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+      
+      <!-- Testimonial 1: Molinari -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="flex items-center mb-6">
+          <img class="w-16 h-16 rounded-full object-cover" 
+               src="/images/testimonial-molinari.jpg" 
+               alt="Representante de Molinari"
+               width="64"
+               height="64">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900">Carlos Mendoza</h4>
+            <p class="text-gray-600">Jefe de Bomberos Voluntarios</p>
+            <p class="text-sm text-gray-500">Molinari, Córdoba</p>
+          </div>
+        </div>
+        
+        <div class="mb-6">
+          <div class="flex items-center mb-3">
+            <div class="flex text-yellow-400">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+            </div>
+            <span class="ml-2 text-sm text-gray-600">5.0</span>
+          </div>
+        </div>
+        
+        <blockquote>
+          <p class="text-gray-700 italic mb-4">
+            "El Sistema S.A.I. cambió completamente nuestra capacidad de respuesta. 
+            En el último incendio, recibimos la alerta en 2 minutos y pudimos actuar 
+            antes de que se extendiera. Salvamos más de 500 hectáreas gracias a la detección temprana."
+          </p>
+        </blockquote>
+        
+        <div class="flex items-center justify-between">
+          <div class="flex items-center text-sm text-gray-500">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Hace 2 semanas</span>
+          </div>
+          <div class="flex items-center text-sm text-green-600 font-semibold">
+            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Verificado</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial 2: La Serranita -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="flex items-center mb-6">
+          <img class="w-16 h-16 rounded-full object-cover" 
+               src="/images/testimonial-serranita.jpg" 
+               alt="Intendente de La Serranita"
+               width="64"
+               height="64">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900">Ana Rodríguez</h4>
+            <p class="text-gray-600">Intendente Municipal</p>
+            <p class="text-sm text-gray-500">La Serranita, Córdoba</p>
+          </div>
+        </div>
+        
+        <div class="mb-6">
+          <div class="flex items-center mb-3">
+            <div class="flex text-yellow-400">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+            </div>
+            <span class="ml-2 text-sm text-gray-600">5.0</span>
+          </div>
+        </div>
+        
+        <blockquote>
+          <p class="text-gray-700 italic mb-4">
+            "Como municipio, invertir en S.A.I. fue la mejor decisión que tomamos. 
+            El sistema se pagó solo con el primer incendio evitado. Ahora nuestros vecinos 
+            duermen tranquilos sabiendo que estamos protegidos las 24 horas."
+          </p>
+        </blockquote>
+        
+        <div class="flex items-center justify-between">
+          <div class="flex items-center text-sm text-gray-500">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Hace 1 mes</span>
+          </div>
+          <div class="flex items-center text-sm text-green-600 font-semibold">
+            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Verificado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Results Section -->
+    <div class="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 lg:p-12 text-white">
+      <div class="text-center mb-8">
+        <h3 class="text-2xl font-bold mb-4">
+          Resultados de las Primeras Implementaciones
+        </h3>
+        <p class="text-lg opacity-90">
+          Los números hablan por sí solos. Mirá los resultados obtenidos en las primeras instalaciones.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Result 1 -->
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div class="text-3xl font-bold mb-2">100%</div>
+          <div class="text-sm opacity-90">Incendios detectados a tiempo</div>
+        </div>
+        
+        <!-- Result 2 -->
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div class="text-3xl font-bold mb-2">2.5min</div>
+          <div class="text-sm opacity-90">Tiempo promedio de detección</div>
+        </div>
+        
+        <!-- Result 3 -->
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <div class="text-3xl font-bold mb-2">1,200</div>
+          <div class="text-sm opacity-90">Hectáreas salvadas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Animaciones para el botón de play */
+  .group:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Efecto de hover en testimoniales */
+  .hover\:shadow-xl:hover {
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+  
+  /* Gradiente animado */
+  .bg-gradient-to-r {
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Mejoras de accesibilidad */
+  button:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+</style>
+
+<script>
+  // Funcionalidad del reproductor de video
+  document.addEventListener('DOMContentLoaded', function() {
+    const videoButton = document.querySelector('.bg-red-600');
+    
+    if (videoButton) {
+      videoButton.addEventListener('click', function() {
+        // Aquí se abriría el modal del video o se reproduciría
+        // Por ahora, simularemos con un alert
+        alert('Video testimonial del Sistema S.A.I. se reproduciría aquí');
+        
+        // En una implementación real, podrías:
+        // - Abrir un modal con el video de YouTube
+        // - Navegar a la página del video
+        // - Usar un iframe para reproducir el video
+      });
+    }
+  });
+</script>

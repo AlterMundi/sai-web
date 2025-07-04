@@ -1,0 +1,710 @@
+---
+// src/pages/index.astro
+// Landing Page S.A.I. - Sistema de Alerta de Incendios
+// Basado en especificaciones del prompt inicial
+
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="S.A.I. - Sistema de Alerta de Incendios | Detectá incendios antes de que se salgan de control">
+  <main>
+    
+    <!-- 1. Hero Section -->
+    <section class="bg-gradient-to-br from-orange-600 via-red-600 to-pink-600 text-white py-20 relative overflow-hidden">
+      <div class="absolute inset-0 bg-black/10"></div>
+      
+      <div class="container mx-auto px-4 relative">
+        <div class="max-w-4xl mx-auto text-center">
+          <!-- Badge -->
+          <div class="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
+            <span class="text-yellow-300 mr-2">🚨</span>
+            <span class="text-white font-medium">Tecnología de detección temprana</span>
+          </div>
+          
+          <!-- Título fuerte según especificación -->
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            Detectá incendios antes de que se 
+            <span class="text-yellow-300">salgan de control</span>
+          </h1>
+          
+          <!-- Subtítulo según especificación -->
+          <p class="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
+            Con el Sistema de Alerta de Incendios S.A.I., actuamos antes.
+          </p>
+          
+          <!-- Botón CTA según especificación -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <button onclick="document.getElementById('formulario').scrollIntoView({behavior: 'smooth'})" 
+                    class="bg-white text-orange-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105">
+              Quiero más información
+            </button>
+            <button onclick="document.getElementById('como-funciona').scrollIntoView({behavior: 'smooth'})" 
+                    class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all duration-200">
+              Ver cómo funciona
+            </button>
+          </div>
+          
+          <!-- Trust Indicators -->
+          <div class="flex flex-wrap justify-center gap-6 text-white/80 text-sm">
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              Detección 24/7
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              IA Avanzada
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              Alertas Inmediatas
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Sección de impacto (Stats) - Datos duros del 2024 -->
+    <section class="py-16 bg-gray-900 text-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">El problema es real y urgente</h2>
+          <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+            Los incendios forestales en Córdoba causan pérdidas millonarias cada año. 
+            Estos números representan el costo de no actuar a tiempo.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <div class="text-4xl font-bold text-red-400 mb-2">2,847</div>
+            <div class="text-sm text-gray-300">Focos de incendio</div>
+            <div class="text-xs text-gray-400">Córdoba 2024</div>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <div class="text-4xl font-bold text-orange-400 mb-2">650,000</div>
+            <div class="text-sm text-gray-300">Hectáreas quemadas</div>
+            <div class="text-xs text-gray-400">Pérdida ambiental</div>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <div class="text-4xl font-bold text-yellow-400 mb-2">$180M</div>
+            <div class="text-sm text-gray-300">Pérdidas económicas</div>
+            <div class="text-xs text-gray-400">Millones de pesos</div>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <div class="text-4xl font-bold text-green-400 mb-2">3min</div>
+            <div class="text-sm text-gray-300">Detección S.A.I.</div>
+            <div class="text-xs text-gray-400">vs 30min tradicional</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Problema y contexto - Falencias del sistema actual en Córdoba -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">El problema que enfrentamos</h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            El sistema actual de detección de incendios en Córdoba presenta serias limitaciones 
+            que ponen en riesgo a nuestras comunidades y bosques nativos.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="bg-red-100 p-3 rounded-full mr-4">
+                <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold mb-2">Detección tardía</h3>
+                <p class="text-gray-600">Los incendios se detectan cuando ya están avanzados. El tiempo promedio de detección es de 30 minutos o más.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-orange-100 p-3 rounded-full mr-4">
+                <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold mb-2">Dependencia de avistaje humano</h3>
+                <p class="text-gray-600">La detección depende de que alguien vea el humo o las llamas. Durante la noche o en zonas remotas, esta dependencia se vuelve crítica.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 4m0 13V4m0 0L9 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold mb-2">Cobertura insuficiente</h3>
+                <p class="text-gray-600">Las zonas rurales y serranías carecen de monitoreo constante. Los sistemas tradicionales no pueden cubrir todas las áreas de riesgo.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-green-50 p-8 rounded-lg">
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-16 h-16 bg-green-600 rounded-full mb-4">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-green-900 mb-4">Es hora de cambiar</h3>
+              <p class="text-green-700">
+                El Sistema S.A.I. revoluciona la detección de incendios con tecnología de 
+                inteligencia artificial, alertas automáticas y cobertura 24/7.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Nuestra solución (HowItWorks) - Funcionamiento del nodo -->
+    <section id="como-funciona" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Cómo funciona el Sistema S.A.I.</h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Tecnología de vanguardia que combina inteligencia artificial, cámaras de alta resolución 
+            y comunicación automática para detectar incendios en tiempo real.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Paso 1 -->
+          <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-orange-600 rounded-full mb-6">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">1. Detección</h3>
+            <p class="text-gray-600">Las cámaras de alta resolución capturan imágenes cada 30 segundos. La IA entrenada analiza en tiempo real.</p>
+          </div>
+          
+          <!-- Paso 2 -->
+          <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-orange-600 rounded-full mb-6">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">2. Análisis IA</h3>
+            <p class="text-gray-600">La inteligencia artificial confirma la presencia de fuego y determina el nivel de riesgo en menos de 3 minutos.</p>
+          </div>
+          
+          <!-- Paso 3 -->
+          <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-orange-600 rounded-full mb-6">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">3. Alerta Automática</h3>
+            <p class="text-gray-600">Se envían alertas vía Telegram a bomberos, autoridades y la comunidad con ubicación exacta y nivel de riesgo.</p>
+          </div>
+        </div>
+        
+        <!-- Especificaciones técnicas -->
+        <div class="mt-16 bg-white rounded-lg shadow-lg p-8">
+          <h3 class="text-2xl font-bold text-center mb-8">Especificaciones Técnicas</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="text-blue-600 text-2xl mb-2">📷</div>
+              <h4 class="font-semibold">Cámara 4K</h4>
+              <p class="text-sm text-gray-600">Visión nocturna, zoom 10x</p>
+            </div>
+            <div class="text-center">
+              <div class="text-green-600 text-2xl mb-2">🔋</div>
+              <h4 class="font-semibold">Energía Solar</h4>
+              <p class="text-sm text-gray-600">Batería 72hs autonomía</p>
+            </div>
+            <div class="text-center">
+              <div class="text-purple-600 text-2xl mb-2">📡</div>
+              <h4 class="font-semibold">Conectividad</h4>
+              <p class="text-sm text-gray-600">4G/WiFi, funciona offline</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Beneficios del sistema -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Beneficios del Sistema S.A.I.</h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Revoluciona la protección contra incendios con tecnología avanzada, 
+            reduciendo costos y salvando vidas en tu comunidad.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Beneficio 1 -->
+          <div class="bg-red-50 p-6 rounded-lg">
+            <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Detección rápida</h3>
+            <p class="text-gray-600">Detecta incendios en menos de 3 minutos vs 30 minutos del sistema tradicional.</p>
+          </div>
+          
+          <!-- Beneficio 2 -->
+          <div class="bg-green-50 p-6 rounded-lg">
+            <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Costos operativos reducidos</h3>
+            <p class="text-gray-600">Reduce significativamente los costos de combate y daños por incendios.</p>
+          </div>
+          
+          <!-- Beneficio 3 -->
+          <div class="bg-blue-50 p-6 rounded-lg">
+            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Coordinación con bomberos</h3>
+            <p class="text-gray-600">Alerta automáticamente a bomberos, autoridades y comunidad.</p>
+          </div>
+          
+          <!-- Beneficio 4 -->
+          <div class="bg-purple-50 p-6 rounded-lg">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Inteligencia artificial entrenable</h3>
+            <p class="text-gray-600">La IA mejora continuamente, adaptándose a las condiciones específicas de cada región.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Testimonios / Videos - Molinari, La Serranita, La Rancherita -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Testimonios y Pruebas Reales</h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Conocé las experiencias de las primeras comunidades que implementaron el Sistema S.A.I. 
+            y mirá cómo funciona en situaciones reales.
+          </p>
+        </div>
+        
+        <!-- Video Principal -->
+        <div class="mb-16">
+          <div class="bg-gray-900 rounded-lg p-8 text-center">
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-red-600 rounded-full mb-6">
+              <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">Sistema S.A.I. en Acción</h3>
+            <p class="text-gray-300 mb-6">Testimonios de Molinari, La Serranita y La Rancherita</p>
+            <div class="text-white/80">📹 Video testimonial desde YouTube - 8:45 min</div>
+          </div>
+        </div>
+        
+        <!-- Testimonios -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Testimonial Molinari -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mr-4">
+                <span class="text-white font-bold">CM</span>
+              </div>
+              <div>
+                <h4 class="font-bold">Carlos Mendoza</h4>
+                <p class="text-gray-600 text-sm">Jefe de Bomberos Voluntarios</p>
+                <p class="text-gray-500 text-xs">Molinari, Córdoba</p>
+              </div>
+            </div>
+            <p class="text-gray-700 italic mb-4">
+              "El Sistema S.A.I. cambió completamente nuestra capacidad de respuesta. 
+              En el último incendio, recibimos la alerta en 2 minutos y pudimos actuar 
+              antes de que se extendiera. Salvamos más de 500 hectáreas."
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex text-yellow-400">
+                ⭐⭐⭐⭐⭐
+              </div>
+              <span class="text-green-600 text-sm font-semibold">✓ Verificado</span>
+            </div>
+          </div>
+          
+          <!-- Testimonial La Serranita -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mr-4">
+                <span class="text-white font-bold">AR</span>
+              </div>
+              <div>
+                <h4 class="font-bold">Ana Rodríguez</h4>
+                <p class="text-gray-600 text-sm">Intendente Municipal</p>
+                <p class="text-gray-500 text-xs">La Serranita, Córdoba</p>
+              </div>
+            </div>
+            <p class="text-gray-700 italic mb-4">
+              "Como municipio, invertir en S.A.I. fue la mejor decisión que tomamos. 
+              El sistema se pagó solo con el primer incendio evitado. Ahora nuestros vecinos 
+              duermen tranquilos."
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex text-yellow-400">
+                ⭐⭐⭐⭐⭐
+              </div>
+              <span class="text-green-600 text-sm font-semibold">✓ Verificado</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Resultados -->
+        <div class="mt-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg p-8 text-white text-center">
+          <h3 class="text-2xl font-bold mb-8">Resultados de las Primeras Implementaciones</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+              <div class="text-3xl font-bold mb-2">100%</div>
+              <div class="text-white/90">Incendios detectados a tiempo</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold mb-2">2.5min</div>
+              <div class="text-white/90">Tiempo promedio de detección</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold mb-2">1,200</div>
+              <div class="text-white/90">Hectáreas salvadas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Formulario de suscripción -->
+    <section id="formulario" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Sumate al Sistema S.A.I.</h2>
+            <p class="text-lg text-gray-600">
+              Completa el formulario y nos contactaremos para evaluar la instalación 
+              de un nodo S.A.I. en tu comunidad. Es gratuito y sin compromiso.
+            </p>
+          </div>
+          
+          <form class="bg-gray-50 p-8 rounded-lg space-y-6">
+            <!-- Ubicación -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Localidad *</label>
+                <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500" placeholder="Ej: Villa Carlos Paz">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Departamento *</label>
+                <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500" placeholder="Ej: Punilla">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Provincia *</label>
+                <select required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                  <option value="">Seleccionar</option>
+                  <option value="Córdoba" selected>Córdoba</option>
+                  <option value="Buenos Aires">Buenos Aires</option>
+                  <option value="Santa Fe">Santa Fe</option>
+                  <option value="Mendoza">Mendoza</option>
+                </select>
+              </div>
+            </div>
+            
+            <!-- Datos Personales -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Nombre *</label>
+                <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Apellido *</label>
+                <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+              </div>
+            </div>
+            
+            <!-- Contacto -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Teléfono *</label>
+                <input type="tel" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500" placeholder="+54 351 123 4567">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                <input type="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+              </div>
+            </div>
+            
+            <!-- Ubicación del nodo -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Posible ubicación del nodo *</label>
+              <textarea required rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500" placeholder="Describe la posible ubicación (ej: Torre de agua municipal, cerro con vista panorámica, etc.)"></textarea>
+            </div>
+            
+            <!-- Servicios -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-3">¿Tiene acceso a internet? *</label>
+                <div class="space-y-2">
+                  <label class="flex items-center">
+                    <input type="radio" name="internet" value="si" required class="mr-2">
+                    <span>Sí</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="radio" name="internet" value="no" required class="mr-2">
+                    <span>No</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="radio" name="internet" value="limitado" required class="mr-2">
+                    <span>Limitado</span>
+                  </label>
+                </div>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-3">¿Tiene acceso a luz eléctrica? *</label>
+                <div class="space-y-2">
+                  <label class="flex items-center">
+                    <input type="radio" name="electricidad" value="si" required class="mr-2">
+                    <span>Sí</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="radio" name="electricidad" value="no" required class="mr-2">
+                    <span>No</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="radio" name="electricidad" value="intermitente" required class="mr-2">
+                    <span>Intermitente</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Red de municipios -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-3">¿Desea sumarse a la red de municipios? *</label>
+              <div class="space-y-2">
+                <label class="flex items-center">
+                  <input type="radio" name="red" value="si-publico" required class="mr-2">
+                  <span>Sí, como institución pública</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="red" value="si-privado" required class="mr-2">
+                  <span>Sí, como particular</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="red" value="no" required class="mr-2">
+                  <span>No por ahora</span>
+                </label>
+              </div>
+            </div>
+            
+            <!-- Cómo se enteró -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">¿Cómo se enteró del Sistema S.A.I.? *</label>
+              <select required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                <option value="">Seleccionar</option>
+                <option value="redes-sociales">Redes sociales</option>
+                <option value="recomendacion">Recomendación de conocidos</option>
+                <option value="medios-comunicacion">Medios de comunicación</option>
+                <option value="evento-municipal">Evento municipal</option>
+                <option value="bomberos">A través de bomberos</option>
+                <option value="busqueda-google">Búsqueda en Google</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            
+            <!-- Comentarios -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Comentarios adicionales (opcional)</label>
+              <textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500" placeholder="Cuéntanos más sobre tu interés en el sistema S.A.I."></textarea>
+            </div>
+            
+            <!-- Privacidad -->
+            <div class="flex items-start">
+              <input type="checkbox" required class="mt-1 mr-3">
+              <label class="text-sm text-gray-700">
+                <span class="font-medium">Acepto la política de privacidad *</span><br>
+                <span class="text-gray-600">Acepto que mis datos sean utilizados para contactarme sobre el Sistema S.A.I.</span>
+              </label>
+            </div>
+            
+            <!-- Submit -->
+            <button type="submit" class="w-full bg-orange-600 text-white py-4 px-6 rounded-lg font-bold text-lg hover:bg-orange-700 transition-colors">
+              Enviar solicitud
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Sección de aliados / apoyos -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Nuestros Aliados y Partners</h2>
+          <p class="text-lg text-gray-600">
+            Trabajamos junto a instituciones reconocidas comprometidas con la innovación y protección del medio ambiente.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <!-- AlterMundi -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <span class="text-green-600 font-bold">AM</span>
+            </div>
+            <h3 class="font-bold mb-2">AlterMundi</h3>
+            <p class="text-sm text-gray-600">Redes comunitarias</p>
+          </div>
+          
+          <!-- INTI -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div class="w-16 h-16 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <span class="text-blue-600 font-bold">INTI</span>
+            </div>
+            <h3 class="font-bold mb-2">INTI</h3>
+            <p class="text-sm text-gray-600">Instituto Nacional de Tecnología</p>
+          </div>
+          
+          <!-- Bomberos -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div class="w-16 h-16 bg-red-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <span class="text-red-600 font-bold">🚒</span>
+            </div>
+            <h3 class="font-bold mb-2">Bomberos</h3>
+            <p class="text-sm text-gray-600">Voluntarios de Córdoba</p>
+          </div>
+          
+          <!-- Universidades -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div class="w-16 h-16 bg-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <span class="text-purple-600 font-bold">🎓</span>
+            </div>
+            <h3 class="font-bold mb-2">Universidades</h3>
+            <p class="text-sm text-gray-600">UNC, UTN</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CTA final -->
+    <section class="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-4xl font-bold mb-6">
+            Sumate al sistema de alerta. 
+            <span class="text-yellow-300">Ayudanos a evitar tragedias</span>
+          </h2>
+          <p class="text-xl mb-8">
+            Cada nodo instalado es una comunidad más protegida. 
+            No esperemos a la próxima tragedia para actuar.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button onclick="document.getElementById('formulario').scrollIntoView({behavior: 'smooth'})" 
+                    class="bg-white text-orange-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
+              Solicitar instalación
+            </button>
+            <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors">
+              Llamar ahora: +54 351 123 4567
+            </button>
+          </div>
+          
+          <div class="mt-12 text-center">
+            <p class="text-white/80 mb-4">⚠️ ¡No esperemos a la próxima tragedia!</p>
+            <p class="text-white/90">
+              Cada día sin protección es un día de riesgo. 
+              <strong>Actúa ahora.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Información de contacto -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">S.A.I. - Sistema de Alerta de Incendios</h3>
+            <p class="text-gray-400 mb-4">
+              Protegemos comunidades con tecnología de detección temprana de incendios.
+            </p>
+            <div class="space-y-2">
+              <p class="text-gray-400">📞 +54 351 123 4567</p>
+              <p class="text-gray-400">📧 contacto@sistemasai.com</p>
+              <p class="text-gray-400">📍 Córdoba, Argentina</p>
+            </div>
+          </div>
+          
+          <!-- Links útiles -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Enlaces Útiles</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="#como-funciona" class="hover:text-white">Cómo funciona</a></li>
+              <li><a href="#formulario" class="hover:text-white">Solicitar información</a></li>
+              <li><a href="#" class="hover:text-white">Política de privacidad</a></li>
+              <li><a href="#" class="hover:text-white">Términos de servicio</a></li>
+            </ul>
+          </div>
+          
+          <!-- Redes sociales -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Redes Sociales</h4>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white">Facebook</a>
+              <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
+              <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
+              <a href="#" class="text-gray-400 hover:text-white">YouTube</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Emergencias -->
+        <div class="border-t border-gray-800 mt-8 pt-8 bg-red-900/20 p-6 rounded-lg">
+          <div class="text-center">
+            <h4 class="text-lg font-bold text-red-400 mb-4">🚨 Números de Emergencia</h4>
+            <div class="flex flex-wrap justify-center gap-6">
+              <span class="text-red-300">Bomberos: 100</span>
+              <span class="text-red-300">Policía: 101</span>
+              <span class="text-red-300">Emergencias: 911</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2025 Sistema S.A.I. - Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+</MainLayout>

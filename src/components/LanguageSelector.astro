@@ -1,0 +1,104 @@
+---
+// src/components/LanguageSelector.astro
+// Componente selector de idioma para la landing page S.A.I.
+
+import { languages, getLangFromUrl, switchLanguage } from '../i18n/utils.js';
+
+// Obtener idioma actual de la URL
+const currentUrl = Astro.url;
+const currentLang = getLangFromUrl(currentUrl);
+
+// Preparar opciones de idioma
+const languageOptions = Object.entries(languages).map(([code, lang]) => ({
+  ...lang,
+  isCurrent: code === currentLang,
+  url: switchLanguage(currentUrl, code)
+}));
+---
+
+<div class="language-selector relative inline-block">
+  <!-- Botón del selector -->
+  <button id="language-toggle" 
+          class="flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white hover:bg-white/20 transition-all duration-200"
+          aria-label="Cambiar idioma">
+    <span class="text-lg mr-2">{languages[currentLang].flag}</span>
+    <span class="text-sm font-medium mr-2">{languages[currentLang].name}</span>
+    <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+
+  <!-- Dropdown menu -->
+  <div id="language-dropdown" 
+       class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden opacity-0 invisible transform translate-y-2 transition-all duration-200 z-50">
+    {languageOptions.map(lang => (
+      <a href={lang.url}
+         class={`flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 transition-colors duration-200 ${lang.isCurrent ? 'bg-orange-50 text-orange-600' : ''}`}>
+        <span class="text-lg mr-3">{lang.flag}</span>
+        <div class="flex-1">
+          <span class="font-medium">{lang.name}</span>
+          {lang.isCurrent && (
+            <span class="ml-2 text-xs bg-orange-100 text-orange-600 px-2 py-1 rounded-full">
+              {currentLang === 'es' ? 'Actual' : 'Current'}
+            </span>
+          )}
+        </div>
+        {lang.isCurrent && (
+          <svg class="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+        )}
+      </a>
+    ))}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('language-toggle');
+    const dropdown = document.getElementById('language-dropdown');
+    const toggleIcon = toggle.querySelector('svg');
+    
+    let isOpen = false;
+    
+    // Toggle dropdown
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      isOpen = !isOpen;
+      
+      if (isOpen) {
+        dropdown.classList.remove('opacity-0', 'invisible', 'translate-y-2');
+        dropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+        toggleIcon.style.transform = 'rotate(180deg)';
+      } else {
+        dropdown.classList.add('opacity-0', 'invisible', 'translate-y-2');
+        dropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+        toggleIcon.style.transform = 'rotate(0deg)';
+      }
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+        if (isOpen) {
+          isOpen = false;
+          dropdown.classList.add('opacity-0', 'invisible', 'translate-y-2');
+          dropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+          toggleIcon.style.transform = 'rotate(0deg)';
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+  .language-selector {
+    z-index: 1000;
+  }
+  
+  .language-selector .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+</style>
